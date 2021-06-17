@@ -2,7 +2,7 @@
 # additional groups are for more control of the environment.
 [control]
 # These hostname must be resolvable from your deployment host
-stack-head     network_interface=enp4s0
+stack-head     network_interface=enp0s8
 
 # The above can also be specified as follows:
 #control[01:03]     ansible_user=kolla
@@ -10,16 +10,16 @@ stack-head     network_interface=enp4s0
 # The network nodes are where your l3-agent and loadbalancers will run
 # This can be the same as a host in the control group
 [network]
-stack-head     network_interface=enp4s0
+stack-head     network_interface=enp0s8
 
 [compute]
-stack-head     network_interface=enp4s0
-stack1     network_interface=eno1
-stack2     network_interface=eno1
-stack3     network_interface=eno1
+stack-head     network_interface=enp0s8
+stack1     network_interface=enp0s3
+stack2     network_interface=enp0s3
+stack3     network_interface=enp0s3
 
 [monitoring]
-stack-head     network_interface=enp4s0
+stack-head     network_interface=enp0s8
 
 # When compute nodes and control nodes use different interfaces,
 # you need to comment out "api_interface" and other interfaces from the globals.yml
@@ -27,9 +27,9 @@ stack-head     network_interface=enp4s0
 #compute01 neutron_external_interface=eth0 api_interface=em1 storage_interface=em1 tunnel_interface=em1
 
 [storage]
-stack1     network_interface=eno1
-stack2     network_interface=eno1
-stack3     network_interface=eno1
+stack1     network_interface=enp0s3
+stack2     network_interface=enp0s3
+stack3     network_interface=enp0s3
 
 [deployment]
 localhost       ansible_connection=local

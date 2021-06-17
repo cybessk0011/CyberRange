@@ -30,12 +30,12 @@ echo "config_strategy: \"COPY_ALWAYS\"" >> /etc/kolla/globals.yml
 echo "kolla_base_distro: \"ubuntu\"" >> /etc/kolla/globals.yml
 echo "kolla_install_type: \"source\"" >> /etc/kolla/globals.yml
 echo "openstack_release: \"victoria\"" >> /etc/kolla/globals.yml
-echo "kolla_internal_vip_address: \"192.168.1.10\"" >> /etc/kolla/globals.yml
+echo "kolla_internal_vip_address: \"192.168.65.10\"" >> /etc/kolla/globals.yml
 echo "kolla_internal_fqdn: \"stack-head\"" >> /etc/kolla/globals.yml
-echo "kolla_external_vip_address: \"10.65.112.223\"" >> /etc/kolla/globals.yml
+echo "kolla_external_vip_address: \"10.27.2.223\"" >> /etc/kolla/globals.yml
 echo "kolla_external_fqdn: \"stack.cybereers.internal\"" >> /etc/kolla/globals.yml
 #echo "network_interface: \"enp4s0\"" >> /etc/kolla/globals.yml
-echo "neutron_external_interface: \"enp5s0\"" >> /etc/kolla/globals.yml
+echo "neutron_external_interface: \"enp0s9\"" >> /etc/kolla/globals.yml
 echo "neutron_plugin_agent: \"openvswitch\"" >> /etc/kolla/globals.yml
 echo "enable_haproxy: \"no\"" >> /etc/kolla/globals.yml
 echo "enable_keepalived: \"no\"" >> /etc/kolla/globals.yml
